@@ -1,53 +1,49 @@
+// export default function Page() {
+//     return <h1 className="text-slate-100">Lesson 02</h1>
+// }
+
 import React, { useState } from 'react';
 
-const Page = () => {
-  const [username, setUsername] = useState('');
+export default function Page() {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your login logic here
-    console.log('Username:', username);
+
+    // Perform login logic here, such as making an API request
+    console.log('Email:', email);
     console.log('Password:', password);
-    // Clear the form after submission
-    setUsername('');
+
+    // Reset the form
+    setEmail('');
     setPassword('');
   };
 
   return (
     <div>
-      <h1>Login Page</h1>
+      <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="email">Email</label>
           <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={handleUsernameChange}
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"
             value={password}
-            onChange={handlePasswordChange}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit">Log in</button>
       </form>
     </div>
   );
-};
-
-export default Page;
+}
