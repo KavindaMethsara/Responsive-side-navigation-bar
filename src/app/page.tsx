@@ -1,5 +1,7 @@
 import Image from 'next/image';
-import { GiHamburgerMenu } from "react-icons/gi";
+import React from 'react';
+import Link from 'next/link';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import {
   MdOutlineSpaceDashboard,
   MdOutlineAnalytics,
@@ -7,10 +9,10 @@ import {
   MdOutlineMoreHoriz,
   MdOutlineSettings,
   MdOutlineLogout,
-} from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
-import { FaRegComments } from "react-icons/fa";
-import { BiMessageSquareDots } from "react-icons/bi";
+} from 'react-icons/md';
+import { CgProfile } from 'react-icons/cg';
+import { FaRegComments } from 'react-icons/fa';
+import { BiMessageSquareDots } from 'react-icons/bi';
 
 export default function Home() {
   return (
